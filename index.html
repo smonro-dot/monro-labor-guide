@@ -1,125 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#1a1d1b" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-title" content="Labor Guide" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<title>Monro Labor Guide</title>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Labor Guide">
+<meta name="theme-color" content="#111">
+<title>Labor Guide</title>
 <style>
-:root{--bg:#1a1d1b;--bg-2:#232826;--card:#2b322f;--ink:#f3eee6;--muted:#c4bbb0;--accent:#d9a08a;--sage:#8fafa0;--line:rgba(243,238,230,.1);--safe-bottom:env(safe-area-inset-bottom,0px)}
-*{box-sizing:border-box;margin:0;padding:0}html,body{height:100%}
-body{font-family:Georgia,serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow:hidden}
-.app{height:100dvh;display:flex;flex-direction:column}
-.top{padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:var(--bg)}
-.eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
-.title{font-size:18px;font-weight:700}
-.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 12px;font-size:13px;font-family:inherit}
-.screens{flex:1;overflow:hidden;position:relative}
-.screen{position:absolute;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:16px 16px calc(96px + var(--safe-bottom));display:none}
-.screen.active{display:block}h2{font-size:22px;margin:4px 0 8px}
-.lede{color:var(--muted);font-size:15px;line-height:1.45;margin-bottom:16px}
-.grid{display:grid;gap:10px}.grid.two{grid-template-columns:1fr 1fr}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}
-.card p,.card li{color:var(--muted);font-size:14px;line-height:1.4}.card ul{padding-left:18px}.card li{margin:4px 0}
-.kicker{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
-.station{display:flex;flex-direction:column;gap:6px;min-height:88px;text-align:left;font-family:inherit;color:inherit}
-.station strong{font-size:18px}.station span{color:var(--muted);font-size:13px}
-.item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:10px}
-.num{display:inline-flex;width:26px;height:26px;border-radius:50%;align-items:center;justify-content:center;background:var(--sage);color:#1a1d1b;font-size:13px;font-weight:700;margin-right:8px}
-.item h3{display:flex;align-items:center;font-size:16px;margin-bottom:6px}
-.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px}
-.tab{flex:0 0 auto;border:1px solid var(--line);background:var(--bg-2);color:var(--ink);border-radius:999px;padding:8px 12px;font-family:inherit;font-size:13px}
-.tab.on{background:var(--accent);color:#1a1d1b;border-color:transparent}
-.nav{position:sticky;bottom:0;display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:8px 8px calc(8px + var(--safe-bottom));background:#141714;border-top:1px solid var(--line)}
-.nav button{background:transparent;border:0;color:var(--muted);font-family:inherit;font-size:11px;padding:8px 2px}
-.nav button.on{color:var(--accent);font-weight:700}.nav b{display:block;font-size:16px;margin-bottom:2px}
-.hidden{display:none!important}
-body.day{--bg:#f6f1ea;--bg-2:#efe7dc;--card:#fff;--ink:#1d211f;--muted:#5d5852;--accent:#b56a52;--sage:#3f5e52;--line:rgba(29,33,31,.1)}
-body.day .nav{background:#efe7dc}
-</style>
-</head>
-<body>
-<div class="app">
-<header class="top"><div class="brand"><div class="eyebrow" id="eyebrow">Roseanne & Spencer</div><div class="title" id="heading">Labor Guide</div></div><div class="actions"><button class="chip" id="themeBtn" type="button">Day</button></div></header>
-<main class="screens">
-<section class="screen active" id="home">
-<p class="lede">Night mode is on for a dim room. Use Comfort during a surge. Use Positions when someone names a station.</p>
-<div class="grid two">
-<button class="card station" data-go="comfort" type="button"><div class="kicker">During a surge</div><strong>Comfort</strong><span>Hip squeeze, sacrum, jiggle, breath</span></button>
-<button class="card station" data-go="positions" type="button"><div class="kicker">Named a station?</div><strong>Positions</strong><span>Inlet · Mid · Outlet</span></button>
-</div>
-<div class="grid" style="margin-top:10px">
-<button class="card station" data-go="space" type="button"><div class="kicker">Early labor / between waves</div><strong>Create space</strong><span>Psoas, tuck/untuck, inversion</span></button>
-<button class="card station" data-go="plan" type="button"><div class="kicker">Talking with staff</div><strong>Birth plan</strong><span>Movement, no offers of meds, delayed cord</span></button>
-</div>
-<h2 style="margin-top:22px">If they say a station</h2>
-<div class="grid two">
-<button class="card station" data-go="positions" data-stage="inlet" type="button"><strong>−4 −3 −2</strong><span>Inlet · tuck · knees out · ankles in</span></button>
-<button class="card station" data-go="positions" data-stage="mid" type="button"><strong>−1 0 +1</strong><span>Mid · open one hip at a time</span></button>
-<button class="card station" data-go="positions" data-stage="outlet" type="button" style="grid-column:1/-1"><strong>+2 +3 +4</strong><span>Outlet / push · untuck · knees in · ankles out</span></button>
-</div>
-<div class="card" style="margin-top:16px"><div class="kicker">Four rules of the room</div><ul><li>Do not say “pain.” Say surge, wave, or comfort level.</li><li>Do not offer medication. She will ask if she wants it.</li><li>Do not share dilation numbers. Fewer exams.</li><li>Default is movement and the Jacuzzi. Monica stickers if monitoring is required.</li></ul></div>
-</section>
-<section class="screen" id="plan">
-<p class="lede">Mother Roseanne · Father Spencer · Baby Girl Monro · Dr. Crownover / Sally McNally · Pediatrics Dr. Mildred Vallance</p>
-<article class="item"><div class="kicker">Environment</div><ul><li>Limit guests. Sign on the door.</li><li>Quiet conversation. Dim lights.</li><li>Her music. Essential oils, no flames.</li></ul></article>
-<article class="item"><div class="kicker">Labor</div><ul><li>Freedom of movement. Monica sticker monitor if continuous monitoring is required.</li><li>IV capped / saline locked.</li><li>Hydrotherapy. Jacuzzi preferred.</li><li>Natural childbirth. Do not offer pain medication or an epidural.</li><li>Wait for water to break on its own. Discuss first if AROM is suggested.</li><li>As few vaginal exams as possible. Do not share dilation.</li><li>Full risks and benefits before any intervention. Time and space to decide.</li><li>No time limits if mother and baby are well. Labor can rest.</li></ul></article>
-<article class="item"><div class="kicker">Birth</div><ul><li>Self-directed pushing. Warm compress on the perineum. No episiotomy.</li><li>Spencer cuts the cord AFTER it stops pulsing. Delayed clamping. Cord-blood bank.</li><li>Birth the placenta naturally. Allow up to 60 minutes.</li><li>Breast crawl immediately. 1–2 hours of bonding.</li></ul></article>
-<article class="item"><div class="kicker">If cesarean</div><ul><li>Spencer is the support person in the OR.</li><li>Leave an arm free so she can touch baby, if anesthesia allows.</li><li>Spencer shortens the cord. Delay clamping.</li></ul></article>
-<article class="item"><div class="kicker">Newborn</div><ul><li>Every procedure and medication approved by both parents first.</li><li>A parent stays with baby for every procedure off the bedside.</li><li>No bath. No Vitamin K. No erythromycin. No Hep B.</li><li>Ask before pacifier or sugar water. Inform before any formula.</li><li>If supplementation is needed, help her hand-express or pump.</li></ul></article>
-</section>
-<section class="screen" id="space">
-<p class="lede">Seven movements to make room. Hold most for about a minute. Built to Birth.</p>
-<article class="item"><h3><span class="num">1</span> Psoas release</h3><p>One foot on an elevated surface. Other leg hangs. Hips level. Gently swing the hanging leg forward and back for 1 minute. Switch sides.</p></article>
-<article class="item"><h3><span class="num">2</span> Tuck + untuck</h3><p>All fours. Move the pelvis, not the back. Tucking opens the inlet. Untucking opens the outlet. 1 minute.</p></article>
-<article class="item"><h3><span class="num">3</span> QL stretch</h3><p>Doorway. Cross right foot over left. Lean left, shoulders square, hands on the frame. Shift hips right and breathe into the ribs. 1 minute. Switch.</p></article>
-<article class="item"><h3><span class="num">4</span> Tuck, lunge + lean</h3><p>Kneel, one foot planted in front. Tuck pelvis and shift forward for a front-hip stretch. Raise the same-side arm and lean. 1 minute each side.</p></article>
-<article class="item"><h3><span class="num">5</span> Elbows on chair</h3><p>Kneel facing a chair. Elbows on the seat. Spine long, pelvis neutral. 1 minute.</p></article>
-<article class="item"><h3><span class="num">6</span> Fascia release</h3><p>Partner jiggles glutes, hips, and thighs with palms. 1–5 minutes.</p></article>
-<article class="item"><h3><span class="num">7</span> Forward-leaning inversion</h3><p>Kneel on a couch or low bed. Forearms to the floor, head hanging loose. 1 minute. Come back to kneeling for 30 seconds before getting down.</p></article>
-</section>
-<section class="screen" id="comfort">
-<p class="lede">Spencer: pick one and stay with it through the whole surge. Built to Birth.</p>
-<article class="item"><h3><span class="num">1</span> Light touch massage</h3><p>Stroke an X across the back, shoulder to low back. Then one stroke down the spine. Repeat.</p></article>
-<article class="item"><h3><span class="num">2</span> Facial relaxation</h3><p>Fingertips at the hairline. Stroke the jaw. Circle the jaw muscles. Continue down the jawline and neck.</p></article>
-<article class="item"><h3><span class="num">3</span> SP6 acupressure</h3><p>Thumb four finger-widths above the inner ankle bone. Firm pressure on the fleshy part behind the shin, through the surge.</p></article>
-<article class="item"><h3><span class="num">4</span> Jiggle / fascia release</h3><p>Palms on the bottom. Gently jiggle hips, glutes, thighs, and calves.</p></article>
-<article class="item"><h3><span class="num">5</span> Sitz bone counter pressure</h3><p>Palms on the sitz bones. You press forward as she presses back. Imagine spreading the sitz bones apart.</p></article>
-<article class="item"><h3><span class="num">6</span> BL32 acupressure</h3><p>Thumbs four finger-widths above the gluteal crease, slightly left and right. Hold through the surge.</p></article>
-<article class="item"><h3><span class="num">7</span> Double hip squeeze</h3><p>Palms on the fleshy outer hips, fingers inward. Squeeze toward each other through the surge.</p></article>
-<article class="item"><h3><span class="num">8</span> Sacral counter pressure</h3><p>Stacked palms on the sacrum. Toward the bum opens the top of the pelvis. Toward her back opens the bottom.</p></article>
-<article class="item"><h3><span class="num">9</span> Destressor breath</h3><p>Inhale nose 4 seconds. Exhale mouth 6 seconds. Rag-doll the body on every breath.</p></article>
-<article class="item"><h3><span class="num">10</span> LI4 acupressure</h3><p>The fleshy mound between thumb and forefinger. Firm pressure through the surge.</p></article>
-</section>
-<section class="screen" id="positions">
-<div class="tabs">
-<button class="tab on" data-stage="inlet" type="button">Inlet −4 to −2</button>
-<button class="tab" data-stage="mid" type="button">Mid −1 to +1</button>
-<button class="tab" data-stage="outlet" type="button">Outlet +2 to +4</button>
-</div>
-<div class="stage" id="stage-inlet"><h2>Inlet</h2><p class="lede">Tuck the pelvis under. Knees OUT. Ankles IN.</p></div>
-<div class="stage hidden" id="stage-mid"><h2>Midpelvis</h2><p class="lede">Asymmetrical positions. Open the hips one side at a time.</p></div>
-<div class="stage hidden" id="stage-outlet"><h2>Outlet & pushing</h2><p class="lede">Untuck the pelvis. Knees IN. Ankles OUT. Self-directed pushing. Warm compress. No episiotomy.</p></div>
-</section>
-</main>
-<nav class="nav">
-<button class="on" data-go="home" type="button"><b>⌂</b>Home</button>
-<button data-go="plan" type="button"><b>✎</b>Plan</button>
-<button data-go="space" type="button"><b>◎</b>Space</button>
-<button data-go="comfort" type="button"><b>♡</b>Comfort</button>
-<button data-go="positions" type="button"><b>↕</b>Positions</button>
-</nav>
-</div>
-<script>
-const titles={home:["Labor Guide","Roseanne & Spencer"],plan:["Birth plan","Show staff if needed"],space:["Create space","Early labor / between waves"],comfort:["Comfort measures","Stay with one through the surge"],positions:["Labor positions","Match the station they name"]};
-function show(id,stage){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("on",b.dataset.go===id));const[t,e]=titles[id]||titles.home;document.getElementById("heading").textContent=t;document.getElementById("eyebrow").textContent=e;if(id==="positions"&&stage)setStage(stage);document.querySelector(".screen.active").scrollTop=0}
-function setStage(stage){document.querySelectorAll(".stage").forEach(s=>s.classList.toggle("hidden",s.id!=="stage-"+stage));document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("on",t.dataset.stage===stage))}
-document.querySelectorAll("[data-go]").forEach(el=>el.addEventListener("click",()=>show(el.dataset.go,el.dataset.stage)));
-document.querySelectorAll(".tab").forEach(el=>el.addEventListener("click",()=>setStage(el.dataset.stage)));
-document.getElementById("themeBtn").addEventListener("click",()=>{const day=document.body.classList.toggle("day");document.getElementById("themeBtn").textContent=day?"Night":"Day";document.querySelector('meta[name="theme-color"]').setAttribute("content",day?"#f6f1ea":"#1a1d1b")});
-</script>
-</body>
-</html>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#111;color:#eee;font-family:-apple-system,sans-serif;padding:calc(12px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px))}
+h1{font-size:22px;margin-bottom:6px}
+p{color:#bdb4aa;margin-bottom:16px;font-size:14px}
+a{display:block;background:#1c1c1c;color:#eee;text-decoration:none;border-radius:14px;padding:16px;margin:0 0 10px}
+a strong{display:block;font-size:17px}
+a span{color:#bdb4aa;font-size:13px}
+</style></head><body>
+<h1>Labor Guide</h1>
+<p>The sheets you uploaded. Each page is the original.</p>
+<a href="https://htmlpreview.github.io/?https://github.com/smonro-dot/monro-labor-guide/blob/main/labor-1.html"><strong>Labor positions 1</strong><span>Inlet</span></a>
+<a href="https://htmlpreview.github.io/?https://github.com/smonro-dot/monro-labor-guide/blob/main/labor-2.html"><strong>Labor positions 2</strong><span>Midpelvis</span></a>
+<a href="https://htmlpreview.github.io/?https://github.com/smonro-dot/monro-labor-guide/blob/main/labor-3.html"><strong>Labor positions 3</strong><span>Outlet & pushing</span></a>
+<a href="https://htmlpreview.github.io/?https://github.com/smonro-dot/monro-labor-guide/blob/main/comfort-1.html"><strong>Comfort measures 1</strong><span>Photos</span></a>
+<a href="https://htmlpreview.github.io/?https://github.com/smonro-dot/monro-labor-guide/blob/main/comfort-2.html"><strong>Comfort measures 2</strong><span>List</span></a>
+<a href="https://htmlpreview.github.io/?https://github.com/smonro-dot/monro-labor-guide/blob/main/space-1.html"><strong>Creating space 1</strong><span>Photos</span></a>
+<a href="https://htmlpreview.github.io/?https://github.com/smonro-dot/monro-labor-guide/blob/main/space-2.html"><strong>Creating space 2</strong><span>List</span></a>
+<a href="https://htmlpreview.github.io/?https://github.com/smonro-dot/monro-labor-guide/blob/main/plan-1.html"><strong>Birth plan 1</strong></a>
+<a href="https://htmlpreview.github.io/?https://github.com/smonro-dot/monro-labor-guide/blob/main/plan-2.html"><strong>Birth plan 2</strong></a>
+</body></html>
