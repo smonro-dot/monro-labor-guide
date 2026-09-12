@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Labor Guide">
+<meta name="theme-color" content="#111">
+<title>Labor Guide</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#111;color:#eee;font-family:-apple-system,sans-serif;padding:calc(10px + env(safe-area-inset-top,0px)) 10px calc(20px + env(safe-area-inset-bottom,0px))}
+h1{font-size:20px;margin:0 4px 12px}
+button.row{display:block;width:100%;text-align:left;background:#1c1c1c;color:#eee;border:0;border-radius:14px;padding:16px;margin:0 0 8px;font:inherit}
+button.row strong{display:block;font-size:16px}
+button.row span{color:#b7aea4;font-size:13px}
+.back{color:#eee;background:none;border:0;font:inherit;margin:0 4px 10px}
+img.sheet{width:100%;border-radius:12px;display:block;background:#000}
+p.note{color:#b7aea4;font-size:13px;margin:8px 4px}
+</style></head><body>
+<div id="home">
+<h1>Labor Guide</h1>
+<p class="note">Original pages you uploaded.</p>
+<button class="row" data-id="labor-1"><strong>Labor positions 1</strong><span>Inlet</span></button>
+<button class="row" data-id="labor-2"><strong>Labor positions 2</strong><span>Midpelvis</span></button>
+<button class="row" data-id="labor-3"><strong>Labor positions 3</strong><span>Outlet & pushing</span></button>
+<button class="row" data-id="comfort-1"><strong>Comfort measures 1</strong><span>Photos</span></button>
+<button class="row" data-id="comfort-2"><strong>Comfort measures 2</strong><span>List</span></button>
+<button class="row" data-id="space-1"><strong>Creating space 1</strong><span>Photos</span></button>
+<button class="row" data-id="space-2"><strong>Creating space 2</strong><span>List</span></button>
+<button class="row" data-id="plan-1"><strong>Birth plan 1</strong></button>
+<button class="row" data-id="plan-2"><strong>Birth plan 2</strong></button>
+</div>
+<div id="view" hidden>
+<button class="back" id="back">‹ All pages</button>
+<p class="note" id="title"></p>
+<img class="sheet" id="pic" alt="Sheet page">
+</div>
+<script>
+const RAW = 'https://raw.githubusercontent.com/smonro-dot/monro-labor-guide/main/img/';
+const titles = {
+  'labor-1':'Labor positions · Inlet',
+  'labor-2':'Labor positions · Midpelvis',
+  'labor-3':'Labor positions · Outlet & pushing',
+  'comfort-1':'Comfort measures · photos',
+  'comfort-2':'Comfort measures · list',
+  'space-1':'Creating space · photos',
+  'space-2':'Creating space · list',
+  'plan-1':'Birth plan · page 1',
+  'plan-2':'Birth plan · page 2'
+};
+const home = document.getElementById('home');
+const view = document.getElementById('view');
+const pic = document.getElementById('pic');
+const title = document.getElementById('title');
+document.querySelectorAll('button.row').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const id = btn.dataset.id;
+    title.textContent = 'Loading ' + titles[id] + '…';
+    pic.removeAttribute('src');
+    home.hidden = true; view.hidden = false;
+    try {
+      const res = await fetch(RAW + id + '.b64');
+      const b64 = (await res.text()).trim();
+      pic.src = 'data:image/jpeg;base64,' + b64;
+      title.textContent = titles[id];
+    } catch (e) {
+      title.textContent = 'Could not load page. Check signal and try again.';
+    }
+  });
+});
+document.getElementById('back').addEventListener('click', () => {
+  view.hidden = true; home.hidden = false; pic.removeAttribute('src');
+});
+</script>
+</body></html>
