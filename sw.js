@@ -1,10 +1,10 @@
-const CACHE = 'monro-sheets-v2';
+const CACHE = 'monro-sheets-v3';
 const ASSETS = [
   './',
   './index.html',
+  './all.html',
   './manifest.json',
   './icon.svg',
-  './icon-180.png',
   './labor-1.html','./labor-2.html','./labor-3.html',
   './comfort-1.html','./comfort-2.html',
   './space-1.html','./space-2.html',
