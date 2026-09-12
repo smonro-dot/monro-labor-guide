@@ -4,26 +4,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Labor Guide">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#111">
 <title>Labor Guide</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
 <style>
+:root{--bg:#111;--fg:#f3eee6;--muted:#b7aea4;--card:#1c1c1c}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#111;color:#eee;font-family:-apple-system,sans-serif;padding:calc(12px + env(safe-area-inset-top,0px)) 16px 24px}
-h1{font-size:22px;margin-bottom:8px}
-p{color:#b7aea4;margin-bottom:14px;font-size:14px}
-a{display:block;background:#1c1c1c;color:#eee;text-decoration:none;border-radius:14px;padding:16px;margin:0 0 8px}
-strong{display:block;font-size:16px}
-span{color:#b7aea4;font-size:13px}
-</style></head><body>
+html,body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+body{padding:calc(14px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px))}
+h1{font-size:26px;margin-bottom:6px}
+p{color:var(--muted);margin-bottom:16px;font-size:15px;line-height:1.4}
+a{display:block;background:var(--card);color:var(--fg);text-decoration:none;border-radius:16px;padding:16px;margin:0 0 10px;min-height:64px}
+strong{display:block;font-size:18px;margin-bottom:3px}
+span{color:var(--muted);font-size:13px}
+</style>
+</head><body>
 <h1>Labor Guide</h1>
-<p>Original pages. Tap one.</p>
+<p>Your original sheets. Dim-room night mode. Add to Home Screen after it opens.</p>
 <a href="labor-1.html"><strong>Labor positions 1</strong><span>Inlet</span></a>
 <a href="labor-2.html"><strong>Labor positions 2</strong><span>Midpelvis</span></a>
 <a href="labor-3.html"><strong>Labor positions 3</strong><span>Outlet & pushing</span></a>
-<a href="comfort-1.html"><strong>Comfort measures 1</strong></a>
-<a href="comfort-2.html"><strong>Comfort measures 2</strong></a>
-<a href="space-1.html"><strong>Creating space 1</strong></a>
-<a href="space-2.html"><strong>Creating space 2</strong></a>
-<a href="plan-1.html"><strong>Birth plan 1</strong></a>
-<a href="plan-2.html"><strong>Birth plan 2</strong></a>
+<a href="comfort-1.html"><strong>Comfort measures 1</strong><span>Photos</span></a>
+<a href="comfort-2.html"><strong>Comfort measures 2</strong><span>List</span></a>
+<a href="space-1.html"><strong>Creating space 1</strong><span>Photos</span></a>
+<a href="space-2.html"><strong>Creating space 2</strong><span>List</span></a>
+<a href="plan-1.html"><strong>Birth plan 1</strong><span>Roseanne & Spencer</span></a>
+<a href="plan-2.html"><strong>Birth plan 2</strong><span>Newborn / cesarean</span></a>
+<script>
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+</script>
 </body></html>
