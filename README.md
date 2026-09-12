@@ -1,2 +1,3 @@
-# monro-labor-guide
-Personal labor guide for Roseanne and Spencer Monro
+# Monro Labor Guide
+
+Personal labor guide for Roseanne and Spencer.

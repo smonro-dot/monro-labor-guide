@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a1d1b" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Labor Guide" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Monro Labor Guide</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon.svg" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <div class="eyebrow" id="eyebrow">Roseanne & Spencer</div>
+        <div class="title" id="heading">Labor Guide</div>
+      </div>
+      <div class="actions">
+        <button class="chip" id="themeBtn" type="button">Day</button>
+      </div>
+    </header>
+    <main class="screens">
+      <section class="screen active" id="home">
+        <p class="lede">Night mode is on for a dim room. Use Comfort during a surge. Use Positions when someone names a station.</p>
+        <div class="grid two">
+          <button class="card station" data-go="comfort" type="button"><div class="kicker">During a surge</div><strong>Comfort</strong><span>Hip squeeze, sacrum, jiggle, breath</span></button>
+          <button class="card station" data-go="positions" type="button"><div class="kicker">Named a station?</div><strong>Positions</strong><span>Inlet · Mid · Outlet</span></button>
+        </div>
+        <div class="grid" style="margin-top:10px">
+          <button class="card station" data-go="space" type="button"><div class="kicker">Early labor / between waves</div><strong>Create space</strong><span>Psoas, tuck/untuck, inversion</span></button>
+          <button class="card station" data-go="plan" type="button"><div class="kicker">Talking with staff</div><strong>Birth plan</strong><span>Movement, no offers of meds, delayed cord</span></button>
+        </div>
+        <h2 style="margin-top:22px">If they say a station</h2>
+        <div class="grid two">
+          <button class="card station" data-go="positions" data-stage="inlet" type="button"><strong>−4 −3 −2</strong><span>Inlet · tuck · knees out · ankles in</span></button>
+          <button class="card station" data-go="positions" data-stage="mid" type="button"><strong>−1 0 +1</strong><span>Mid · open one hip at a time</span></button>
+          <button class="card station" data-go="positions" data-stage="outlet" type="button" style="grid-column:1/-1"><strong>+2 +3 +4</strong><span>Outlet / push · untuck · knees in · ankles out</span></button>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <div class="kicker">Four rules of the room</div>
+          <ul>
+            <li>Do not say “pain.” Say surge, wave, or comfort level.</li>
+            <li>Do not offer medication. She will ask if she wants it.</li>
+            <li>Do not share dilation numbers. Fewer exams.</li>
+            <li>Default is movement and the Jacuzzi. Monica stickers if monitoring is required.</li>
+          </ul>
+        </div>
+        <p class="lede" style="margin-top:16px">In Safari: tap Share, then Add to Home Screen. Name it Labor Guide.</p>
+      </section>
+      <section class="screen" id="plan">
+        <p class="lede">Mother Roseanne · Father Spencer · Baby Girl Monro · Dr. Crownover / Sally McNally · Pediatrics Dr. Mildred Vallance</p>
+        <article class="item"><div class="kicker">Environment</div><ul><li>Limit guests. Sign on the door.</li><li>Quiet conversation. Dim lights.</li><li>Her music. Essential oils, no flames.</li></ul></article>
+        <article class="item"><div class="kicker">Labor</div><ul><li>Freedom of movement. Monica sticker monitor if continuous monitoring is required.</li><li>IV capped / saline locked.</li><li>Hydrotherapy. Jacuzzi preferred.</li><li>Natural childbirth. Do not offer pain medication or an epidural.</li><li>Wait for water to break on its own. Discuss first if AROM is suggested.</li><li>As few vaginal exams as possible. Do not share dilation.</li><li>Full risks and benefits before any intervention. Time and space to decide.</li><li>No time limits if mother and baby are well. Labor can rest.</li></ul></article>
+        <article class="item"><div class="kicker">Birth</div><ul><li>Self-directed pushing. Warm compress on the perineum. No episiotomy.</li><li>Spencer cuts the cord AFTER it stops pulsing. Delayed clamping. Cord-blood bank.</li><li>Birth the placenta naturally. Allow up to 60 minutes.</li><li>Breast crawl immediately. 1–2 hours of bonding.</li></ul></article>
+        <article class="item"><div class="kicker">If cesarean</div><ul><li>Spencer is the support person in the OR.</li><li>Leave an arm free so she can touch baby, if anesthesia allows.</li><li>Spencer shortens the cord. Delay clamping.</li></ul></article>
+        <article class="item"><div class="kicker">Newborn</div><ul><li>Every procedure and medication approved by both parents first.</li><li>A parent stays with baby for every procedure off the bedside.</li><li>No bath. No Vitamin K. No erythromycin. No Hep B.</li><li>Ask before pacifier or sugar water. Inform before any formula.</li><li>If supplementation is needed, help her hand-express or pump.</li></ul></article>
+      </section>
+      <section class="screen" id="space">
+        <p class="lede">Seven movements to make room. Hold most for about a minute. Built to Birth.</p>
+        <article class="item"><h3><span class="num">1</span> Psoas release</h3><p>One foot on an elevated surface. Other leg hangs. Hips level. Gently swing the hanging leg forward and back for 1 minute. Switch sides.</p></article>
+        <article class="item"><h3><span class="num">2</span> Tuck + untuck</h3><p>All fours. Move the pelvis, not the back. Tucking opens the inlet. Untucking opens the outlet. 1 minute.</p></article>
+        <article class="item"><h3><span class="num">3</span> QL stretch</h3><p>Doorway. Cross right foot over left. Lean left, shoulders square, hands on the frame. Shift hips right and breathe into the ribs. 1 minute. Switch.</p></article>
+        <article class="item"><h3><span class="num">4</span> Tuck, lunge + lean</h3><p>Kneel, one foot planted in front. Tuck pelvis and shift forward for a front-hip stretch. Raise the same-side arm and lean. 1 minute each side.</p></article>
+        <article class="item"><h3><span class="num">5</span> Elbows on chair</h3><p>Kneel facing a chair. Elbows on the seat. Spine long, pelvis neutral. 1 minute.</p></article>
+        <article class="item"><h3><span class="num">6</span> Fascia release</h3><p>Partner jiggles glutes, hips, and thighs with palms. 1–5 minutes.</p></article>
+        <article class="item"><h3><span class="num">7</span> Forward-leaning inversion</h3><p>Kneel on a couch or low bed. Forearms to the floor, head hanging loose. 1 minute. Come back to kneeling for 30 seconds before getting down.</p></article>
+      </section>
+      <section class="screen" id="comfort">
+        <p class="lede">Spencer: pick one and stay with it through the whole surge. Built to Birth.</p>
+        <article class="item"><h3><span class="num">1</span> Light touch massage</h3><p>Stroke an X across the back, shoulder to low back. Then one stroke down the spine. Repeat.</p></article>
+        <article class="item"><h3><span class="num">2</span> Facial relaxation</h3><p>Fingertips at the hairline. Stroke the jaw. Circle the jaw muscles. Continue down the jawline and neck.</p></article>
+        <article class="item"><h3><span class="num">3</span> SP6 acupressure</h3><p>Thumb four finger-widths above the inner ankle bone. Firm pressure on the fleshy part behind the shin, through the surge.</p></article>
+        <article class="item"><h3><span class="num">4</span> Jiggle / fascia release</h3><p>Palms on the bottom. Gently jiggle hips, glutes, thighs, and calves.</p></article>
+        <article class="item"><h3><span class="num">5</span> Sitz bone counter pressure</h3><p>Palms on the sitz bones. You press forward as she presses back. Imagine spreading the sitz bones apart.</p></article>
+        <article class="item"><h3><span class="num">6</span> BL32 acupressure</h3><p>Thumbs four finger-widths above the gluteal crease, slightly left and right. Hold through the surge.</p></article>
+        <article class="item"><h3><span class="num">7</span> Double hip squeeze</h3><p>Palms on the fleshy outer hips, fingers inward. Squeeze toward each other through the surge.</p></article>
+        <article class="item"><h3><span class="num">8</span> Sacral counter pressure</h3><p>Stacked palms on the sacrum. Toward the bum opens the top of the pelvis. Toward her back opens the bottom.</p></article>
+        <article class="item"><h3><span class="num">9</span> Destressor breath</h3><p>Inhale nose 4 seconds. Exhale mouth 6 seconds. Rag-doll the body on every breath.</p></article>
+        <article class="item"><h3><span class="num">10</span> LI4 acupressure</h3><p>The fleshy mound between thumb and forefinger. Firm pressure through the surge.</p></article>
+      </section>
+      <section class="screen" id="positions">
+        <div class="tabs">
+          <button class="tab on" data-stage="inlet" type="button">Inlet −4 to −2</button>
+          <button class="tab" data-stage="mid" type="button">Mid −1 to +1</button>
+          <button class="tab" data-stage="outlet" type="button">Outlet +2 to +4</button>
+        </div>
+        <div class="stage" id="stage-inlet"><h2>Inlet</h2><p class="lede">Tuck the pelvis under. Knees OUT. Ankles IN. Hands and knees, supported squat, sitting on the ball with knees wide, side-lying with a peanut or ball.</p></div>
+        <div class="stage hidden" id="stage-mid"><h2>Midpelvis</h2><p class="lede">Asymmetrical positions. Open the hips one side at a time. Lunge, runner’s lunge with a block, standing foot on a chair, side-lying with peanut, throne on the ball.</p></div>
+        <div class="stage hidden" id="stage-outlet"><h2>Outlet & pushing</h2><p class="lede">Untuck the pelvis. Knees IN. Ankles OUT. Self-directed pushing. Warm compress. No episiotomy.</p></div>
+      </section>
+    </main>
+    <nav class="nav">
+      <button class="on" data-go="home" type="button"><b>⌂</b>Home</button>
+      <button data-go="plan" type="button"><b>✎</b>Plan</button>
+      <button data-go="space" type="button"><b>◎</b>Space</button>
+      <button data-go="comfort" type="button"><b>♡</b>Comfort</button>
+      <button data-go="positions" type="button"><b>↕</b>Positions</button>
+    </nav>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
